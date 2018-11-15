@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+
 // 处理错误
 func CheckError(err error){
 	if err != nil{
@@ -60,7 +61,7 @@ func main(){
 	for{
 		num,_ := conn.Read(buf)
 		if num > 0 {
-			fmt.Println("服务器端(%s): %s", remoteAddr, buf[0:num])
+			fmt.Println(string(buf[0:num]))
 		}
 	}
 }
